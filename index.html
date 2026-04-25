@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description" content="Creative developer portfolio — building bold digital experiences with code, design, and imagination.">
+    <meta name="keywords" content="portfolio, developer, designer, creative, web, UI/UX">
+    <meta property="og:title" content="Portfolio | Creative Developer">
+    <meta property="og:description" content="Building bold digital experiences that leave a mark.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-ring" aria-hidden="true"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo" id="nav-logo">
+                <span class="logo-bracket">&lt;</span>DEV<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#projects" class="nav-link" data-text="Projects">Projects</a>
+                <a href="#skills" class="nav-link" data-text="Skills">Skills</a>
+                <a href="#timeline" class="nav-link" data-text="Journey">Journey</a>
+                <a href="#contact" class="btn-nav" id="btn-contact">Let's Talk</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#timeline" class="mobile-link">Journey</a>
+        <a href="#contact" class="mobile-link mobile-cta">Let's Talk</a>
+    </div>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section id="hero" class="hero">
+            <div class="container hero-container">
+                <div class="hero-text reveal-hero">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for work
+                    </div>
+                    <h1 class="hero-headline">
+                        I craft<br>
+                        <span class="typewriter-wrap">
+                            <span id="typewriter" class="gradient-text"></span><span class="cursor-blink">|</span>
+                        </span><br>
+                        experiences.
+                    </h1>
+                    <p class="hero-sub">Creative developer fusing design intuition with clean engineering — building products people actually love to use.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary" id="btn-view-work">
+                            <span>View My Work</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#contact" class="btn-ghost" id="btn-contact-hero">Say Hello</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-num" data-count="3">0</span>+
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="24">0</span>+
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-num" data-count="12">0</span>+
+                            <span class="stat-label">Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual reveal-hero" style="animation-delay:.3s">
+                    <div class="avatar-frame">
+                        <div class="avatar-glow"></div>
+                        <img src="profile.png" alt="Profile photo" class="avatar-img" id="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';">
+                        <div id="avatar-placeholder" class="avatar-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                        </div>
+                        <div class="floating-badge badge-top" aria-label="Creative">
+                            <span>✦ Creative</span>
+                        </div>
+                        <div class="floating-badge badge-bottom" aria-label="Developer">
+                            <span>{ } Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint" aria-label="Scroll down">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">// About Me</span>
+                    <h2 class="section-title">Passionate about <span class="gradient-text">detail</span> and design.</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>With a relentless curiosity for both code and design, I build digital products that feel alive. My approach merges systematic thinking with creative expression — I don't just build things that work, I build things that <em>feel</em> right.</p>
+                        <p>I believe the best interfaces are invisible. Every pixel, every interaction, every micro-animation exists to guide and delight — never to distract.</p>
+                        <div class="about-tags">
+                            <span class="tag">Problem Solver</span>
+                            <span class="tag">UI/UX Thinker</span>
+                            <span class="tag">Clean Code Advocate</span>
+                            <span class="tag">Lifelong Learner</span>
+                        </div>
+                    </div>
+                    <div class="about-cards reveal" style="transition-delay:.2s">
+                        <div class="info-card" id="info-card-1">
+                            <div class="info-card-icon">🎨</div>
+                            <h3>Design First</h3>
+                            <p>Every project starts with understanding the user — their needs, their frustrations, their goals.</p>
+                        </div>
+                        <div class="info-card" id="info-card-2">
+                            <div class="info-card-icon">⚡</div>
+                            <h3>Performance Obsessed</h3>
+                            <p>Speed is a feature. I craft experiences that are beautiful and blazing fast.</p>
+                        </div>
+                        <div class="info-card" id="info-card-3">
+                            <div class="info-card-icon">🔁</div>
+                            <h3>Always Iterating</h3>
+                            <p>Good enough is never enough. I refine, improve, and push until it's exceptional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">// Projects</span>
+                    <h2 class="section-title">Work I'm <span class="gradient-text">proud of.</span></h2>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card featured reveal" id="project-1">
+                        <div class="project-meta">
+                            <span class="project-tag">Featured · Web App</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-icon" aria-label="Live demo" title="Live Demo">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                                <a href="#" class="project-link-icon" aria-label="View code" title="View Code">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-img-wrap">
+                            <img src="orbit.png" alt="Orbit Dashboard" class="project-image">
+                        </div>
+                        <h3 class="project-title">Orbit Dashboard</h3>
+                        <p class="project-desc">A real-time analytics dashboard with customizable widgets, dark mode, and data visualization powered by a REST API.</p>
+                        <div class="project-stack">
+                            <span>React</span><span>Node.js</span><span>D3.js</span><span>PostgreSQL</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" id="project-2" style="transition-delay:.1s">
+                        <div class="project-meta">
+                            <span class="project-tag">Mobile · UI Design</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-icon" aria-label="Live demo" title="Live Demo">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-img-wrap">
+                            <img src="flora.png" alt="Flora App" class="project-image">
+                        </div>
+                        <h3 class="project-title">Flora App</h3>
+                        <p class="project-desc">Plant care companion app with AI-powered disease detection and smart watering reminders.</p>
+                        <div class="project-stack">
+                            <span>Flutter</span><span>Python</span><span>TensorFlow</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" id="project-3" style="transition-delay:.2s">
+                        <div class="project-meta">
+                            <span class="project-tag">E-commerce</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link-icon" aria-label="Live demo" title="Live Demo">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-img-wrap">
+                            <img src="luxe.png" alt="Luxe Store" class="project-image">
+                        </div>
+                        <h3 class="project-title">Luxe Store</h3>
+                        <p class="project-desc">Premium e-commerce experience with 3D product views, smooth checkout, and personalised recommendations.</p>
+                        <div class="project-stack">
+                            <span>Next.js</span><span>Stripe</span><span>Three.js</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">// Skills</span>
+                    <h2 class="section-title">My <span class="gradient-text">toolkit.</span></h2>
+                </div>
+                <div class="skills-layout">
+                    <div class="skill-bars reveal">
+                        <h3 class="skills-subtitle">Proficiency</h3>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>UI/UX Design</span><span class="skill-pct">92%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Frontend Dev</span><span class="skill-pct">88%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Backend / APIs</span><span class="skill-pct">75%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>Mobile (Flutter)</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label"><span>DevOps / Cloud</span><span class="skill-pct">60%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags-wrap reveal" style="transition-delay:.2s">
+                        <h3 class="skills-subtitle">Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag" id="sk-html">HTML5</span>
+                            <span class="skill-tag" id="sk-css">CSS3</span>
+                            <span class="skill-tag" id="sk-js">JavaScript</span>
+                            <span class="skill-tag" id="sk-ts">TypeScript</span>
+                            <span class="skill-tag" id="sk-react">React</span>
+                            <span class="skill-tag" id="sk-next">Next.js</span>
+                            <span class="skill-tag" id="sk-node">Node.js</span>
+                            <span class="skill-tag" id="sk-python">Python</span>
+                            <span class="skill-tag" id="sk-figma">Figma</span>
+                            <span class="skill-tag" id="sk-git">Git</span>
+                            <span class="skill-tag" id="sk-docker">Docker</span>
+                            <span class="skill-tag" id="sk-flutter">Flutter</span>
+                            <span class="skill-tag" id="sk-sql">PostgreSQL</span>
+                            <span class="skill-tag" id="sk-mongo">MongoDB</span>
+                            <span class="skill-tag" id="sk-banana">Nano Banana Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TIMELINE ===== -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">// Journey</span>
+                    <h2 class="section-title">How I got <span class="gradient-text">here.</span></h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal" id="tl-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-card">
+                            <h3>Senior Developer</h3>
+                            <span class="timeline-company">Tech Studio Inc.</span>
+                            <p>Leading a team of 5 engineers, architecting scalable SaaS products and mentoring junior developers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal" id="tl-2" style="transition-delay:.1s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-card">
+                            <h3>Frontend Engineer</h3>
+                            <span class="timeline-company">Digital Agency Co.</span>
+                            <p>Built 15+ client websites, improving average Lighthouse scores from 60 to 95+ across the board.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal" id="tl-3" style="transition-delay:.2s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-card">
+                            <h3>CS Degree</h3>
+                            <span class="timeline-company">University of Technology</span>
+                            <p>Graduated with honors. Specialised in Human-Computer Interaction and Web Technologies.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal" id="tl-4" style="transition-delay:.3s">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-card">
+                            <h3>First Freelance Project</h3>
+                            <span class="timeline-company">Self-Employed</span>
+                            <p>Landed first paid project — a local restaurant website — and never looked back.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box reveal">
+                    <span class="section-tag">// Contact</span>
+                    <h2 class="contact-title">Let's build something <span class="gradient-text">amazing.</span></h2>
+                    <p class="contact-sub">Have a project in mind? I'd love to hear about it. Drop me a message and let's make it happen.</p>
+                    <div class="contact-actions">
+                        <a href="mailto:hello@example.com" class="btn-primary" id="btn-email">
+                            <span>Send an Email</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                        </a>
+                        <div class="social-links">
+                            <a href="#" class="social-link" id="social-github" aria-label="GitHub">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                            </a>
+                            <a href="#" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="#" class="social-link" id="social-twitter" aria-label="Twitter/X">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="#hero" class="logo">
+                <span class="logo-bracket">&lt;</span>DEV<span class="logo-bracket">/&gt;</span>
+            </a>
+            <p class="footer-copy">© 2026 — Crafted with passion & pixels.</p>
+            <a href="#hero" class="back-top" id="back-top" aria-label="Back to top">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
